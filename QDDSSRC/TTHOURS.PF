@@ -1,0 +1,42 @@
+      *---------------------------------------------------------
+      * Source information
+      * @@LIBRARY: GROSSD1
+      * @@FILE: QDDSSRC
+      * @@MEMBER: TTHOURS
+      * @@TYPE: PF
+      * @@TEXT: Time Keeping / Arbeitszeitaufzeichnung
+      *---------------------------------------------------------
+      **************************************************************************
+      ** Copyright (C) 2020 Daniel Groﬂ, Pegnitz
+      **
+      ** TimeTrack - Hours - logged hours (billable) per client/assignment
+      **
+      ** History
+      ** 11.01.2020 dg created
+      **************************************************************************
+
+                R HOURS                     TEXT('TimeTrack Hours')
+
+                  USERID        10A         COLHDG('User ID')
+
+                  SYSTEM        10A         COLHDG('System ID')
+
+                  CLIENT        10A         COLHDG('Client ID')
+
+                  ASSIGN        20A         COLHDG('Assignment')
+
+                  DETAIL        50A         COLHDG('Details')
+
+                  CLKDTE          L         COLHDG('Clock Date')
+                                            DATFMT(*EUR)
+
+                  CLKITM          T         COLHDG('Clock In Time')
+                                            TIMFMT(*HMS)
+
+                  CLKOTM          T         COLHDG('Clock Out Time')
+                                            TIMFMT(*HMS)
+
+                  HRSBLB         5S 2       COLHDG('Hours billable')
+                                            EDTCDE(J)
+
+                  BILLED         1A         COLHDG('Billed')
