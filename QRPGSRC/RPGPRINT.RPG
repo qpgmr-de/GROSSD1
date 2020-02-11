@@ -1,0 +1,12 @@
+      *---------------------------------------------------------
+      * Source information
+      * @@LIBRARY: GROSSD1
+      * @@FILE: QRPGSRC
+      * @@MEMBER: RPGPRINT
+      * @@TYPE: RPG
+      * @@TEXT: Shortest possible Hello World
+      *---------------------------------------------------------
+     FQPRINT  O   F      80            PRINTER
+     C                     MOVE *ON       *INLR
+     OQPRINT  D    1   LR
+     O                                   50 'Hello, World!'
