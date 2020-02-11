@@ -1,0 +1,35 @@
+      *---------------------------------------------------------
+      * Source information
+      * @@LIBRARY: GROSSD1
+      * @@FILE: QCBLLESRC
+      * @@MEMBER: COBPRINT
+      * @@TYPE: CBLLE
+      * @@TEXT: Simple Printer Demo
+      *---------------------------------------------------------
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. CobPrint.
+
+       ENVIRONMENT DIVISION.
+
+       INPUT-OUTPUT SECTION.
+       FILE-CONTROL.
+           SELECT OutPrt ASSIGN TO PRINTER.
+
+       DATA DIVISION.
+
+       FILE SECTION.
+       FD  OutPrt.
+       01  OutRec           PIC X(80).
+
+       WORKING-STORAGE SECTION.
+       01  Hello            PIC X(80)       VALUE "Hello, World!".
+
+       PROCEDURE DIVISION.
+
+       Main.
+           OPEN OUTPUT OutPrt.
+           WRITE OutRec FROM Hello AFTER 1.
+           CLOSE OutPrt.
+
+       Finito.
+           EXIT PROGRAM.
