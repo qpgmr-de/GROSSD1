@@ -1,0 +1,24 @@
+      *---------------------------------------------------------
+      * Source information
+      * @@LIBRARY: GROSSD1
+      * @@FILE: QDDSSRC
+      * @@MEMBER: TESTB36
+      * @@TYPE: DSPF
+      * @@TEXT: Conversion Decimal <-> Base36
+      *---------------------------------------------------------
+     A*%%TS  SD  20191113  181459  GROSSD      REL-V7R3M0  5770-WDS
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3)
+     A          R TESTB36FM
+     A*%%TS  SD  20191113  181459  GROSSD      REL-V7R3M0  5770-WDS
+     A                                      CF03
+     A                                 22  3'F3=End'
+     A                                  7  8'Decimal Number . . . .:'
+     A                                  9  8'Number with Base 36  .:'
+     A            B36NUM        10   B  9 32
+     A            DECNUM        17  0B  7 32
+     A                                  2 70DATE(*SYS *Y)
+     A                                      EDTCDE(Y)
+     A                                  3 70TIME
+     A                                  2  4SYSNAME
+     A                                  3  4USER
