@@ -1,0 +1,39 @@
+      *---------------------------------------------------------
+      * Source information
+      * @@LIBRARY: GROSSD1
+      * @@FILE: QCBLLESRC
+      * @@MEMBER: FUNCDEMO
+      * @@TYPE: CBLLE
+      * @@TEXT: FuncDemo from Facebook
+      *---------------------------------------------------------
+       IDENTIFICATION DIVISION.
+       Program-id. FuncDemo.
+       Data division.
+       Working-storage section.
+       01  vTable.
+           03 Filler  pic 99999 value  338.
+           03 Filler  pic 99999 value  259.
+           03 Filler  pic 99999 value   10.
+           03 Filler  pic 99999 value   98.
+           03 Filler  pic 99999 value    0.
+           03 Filler  pic 99999 value  912.
+           03 Filler  pic 99999 value    2.
+           03 Filler  pic 99999 value  123.
+           03 Filler  pic 99999 value   27.
+           03 Filler  pic 99999 value   13.
+       01  aTable Redefines vTable.
+  	     03 aNumber pic 99999 occurs 10.
+       77  answ       pic zzzz9.
+       Procedure division.
+       Main.
+           Compute answ = 1 +
+                   function integer(function log10(
+                   function max(aNumber(all))))
+           Display answ
+           Goback.
+   	     End program FuncDemo.
+
+      * Try to answer the following questions:
+      * A) What output value will be displayed?
+      * B) What will the output be after changing
+      * the biggest value from 3145 to 0 (zero)?
